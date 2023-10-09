@@ -1,0 +1,47 @@
+﻿﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	@*@if (Model.HasValue("pageTitle"))
+	{
+		<title>@Model.Value("pageTitle")</title>
+	}
+	else
+	{
+		<title>@Model.Name - Lexus</title>
+	}*@
+	@*<meta name="title" content="@Model.Value("sEOTitle")">
+	<meta name="description" content="@Model.Value("sEODescription")">*@
+	@*<link rel="shortcut icon" type="image/x-icon" sizes="16x16 32x32" href="/media/favicon_LEXUS.png">*@
+
+	@* PRELOADING RESOURCES *@
+	<link rel="preload" href="/css/global.css" as="style">
+
+	@* CALLING HEAD FILES *@
+	<link rel="stylesheet" href="/css/global.css">
+
+	@RenderSection("head", required: false)
+</head>
+<body>
+
+	<!-- End Google Tag Manager (noscript) -->
+	@*@await Html.PartialAsync("./header/_header")*@
+
+	<main>
+		@RenderBody()
+	</main>
+
+	@* CALLING BODY FILES *@
+	@*@await Html.PartialAsync("./footer/_footer")*@
+	@RenderSection("body", required: false)
+	<script src="/scripts/header.js"></script>
+</body>
+</html>

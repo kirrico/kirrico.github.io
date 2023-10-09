@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.AvailableProducts>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+@section head{
+	<link rel="stylesheet" href="~/css/availablePage.css">
+}
+
+@section body{
+	<script src="~/scripts/availablePage.js"></script>
+	
+}
+
+@await Html.PartialAsync("AvailableProducts/_AvailableProducts")

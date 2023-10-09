@@ -1,0 +1,83 @@
+﻿@using Umbraco.Cms.Web.Common;
+@inject UmbracoHelper Umbraco;
+@using Umbraco.Cms.Core.Services;
+
+@{
+    var AvailablePage = Umbraco.Content(Guid.Parse("4d186e72-ae3f-4b0d-b5d1-4e7239a570d3"));
+}
+
+<h1>@AvailablePage.Value("titleProducts")</h1>
+
+<section id="gallery">
+	<h1>Test Galeria </h1>
+	<!-- Filter -->
+	<div class="button-group">
+		<button class="btn all" data-category="*">all</button>
+		<button class="btn homepage" data-category=".homepage">homepage</button>
+		<button class="btn ui" data-category=".ui">ui</button>
+		<button class="btn banner" data-category=".banner">banner</button>
+	</div>
+
+
+	<ul class="grid">
+		<li class="grid-item element-item ui">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/abc?text=UI" width="100%" alt="ui">
+			</a>
+			<p class="title">UI Design</p>
+		</li>
+		<li class="grid-item element-item ui">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/abc?text=UI" width="100%" alt="ui">
+			</a>
+			<p class="title">UI Design</p>
+		</li>
+		<li class="grid-item element-item homepage">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/cba?text=homepage" width="100%" alt="homepage">
+			</a>
+			<p class="title">homepage</p>
+		</li>
+		<li class="grid-item element-item homepage">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/cba?text=homepage" width="100%" alt="homepagee">
+			</a>
+			<p class="title">homepage</p>
+		</li>
+		<li class="grid-item element-item banner">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200?text=banner" width="100%" alt="banner">
+			</a>
+			<p class="title">banner</p>
+		</li>
+		<li class="grid-item element-item banner">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200?text=banner" width="100%" alt="banner">
+			</a>
+			<p class="title">banner</p>
+		</li>
+		<li class="grid-item element-item homepage">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/cba?text=homepage" width="100%" alt="homepage">
+			</a>
+			<p class="title">homepage</p>
+		</li>
+		<li class="grid-item element-item homepage">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200/cba?text=homepage" width="100%" alt="homepagee">
+			</a>
+			<p class="title">homepage</p>
+		</li>
+		<li class="grid-item element-item banner">
+			<a href="#large_img">
+				<img src="http://placehold.it/300x200?text=banner" width="100%" alt="banner">
+			</a>
+			<p class="title">banner</p>
+		</li>
+	</ul>
+</section>
+
+@*Gallery*@
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+	<script src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js'></script>
+	<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
